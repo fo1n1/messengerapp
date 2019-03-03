@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="/js/submit.js"></script>
+    <script src="/js/message.js"></script>
+</head>
+<body>
+    <div id="messageContainer"></div>
+    {% if authenticated %}
+        <form action="/messages" id="postMessage">
+            <input type="text" name="message" placeholder="Post message">
+            <input type="submit" value="Post">
+        </form>
+        <p><a href="/logout">Logout</a></p>
+    {% else %}
+        <p><a href="/login">Login</a></p>
+        <p><a href="/sign_up">Sign up</a></p>
+    {% endif %}
+</body>
+</html>
