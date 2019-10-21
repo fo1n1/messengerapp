@@ -35,5 +35,5 @@ six==1.11.0               # via bcrypt, eventlet, mock, nameko
 sqlalchemy==1.2.18
 urllib3==1.23             # via requests
 vine==1.1.4               # via amqp
-werkzeug==0.14.1          # via flask, nameko
+werkzeug==0.15.3          # via flask, nameko
 wrapt==1.10.11            # via nameko
