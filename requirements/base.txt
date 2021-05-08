@@ -4,36 +4,79 @@
 #
 #    pip-compile requirements/base.in
 #
-amqp==2.3.2               # via kombu
+amqp==2.3.2
+    # via kombu
 bcrypt==3.1.6
-certifi==2018.8.24        # via requests
-cffi==1.12.2              # via bcrypt
-chardet==3.0.4            # via requests
-click==7.0                # via flask
-dnspython==1.15.0         # via eventlet
-eventlet==0.24.1          # via nameko
+    # via -r base.in
+certifi==2018.8.24
+    # via requests
+cffi==1.12.2
+    # via bcrypt
+chardet==3.0.4
+    # via requests
+click==7.0
+    # via flask
+dnspython==1.15.0
+    # via eventlet
+eventlet==0.31.0
+    # via nameko
 flask==1.0.2
-greenlet==0.4.15          # via eventlet
-idna==2.7                 # via requests
-importlib-metadata==0.5   # via path.py
-itsdangerous==1.1.0       # via flask
+    # via -r base.in
+greenlet==0.4.15
+    # via eventlet
+idna==2.7
+    # via requests
+importlib-metadata==0.5
+    # via path.py
+itsdangerous==1.1.0
+    # via flask
 jinja2==2.10
-kombu==4.2.1              # via nameko
-markupsafe==1.1.1         # via jinja2
-mock==2.0.0               # via nameko
-monotonic==1.5            # via eventlet
+    # via
+    #   -r base.in
+    #   flask
+kombu==4.2.1
+    # via nameko
+markupsafe==1.1.1
+    # via jinja2
+mock==2.0.0
+    # via nameko
 nameko-sqlalchemy==1.5.0
+    # via -r base.in
 nameko==2.11.0
-path.py==11.5.0           # via nameko
-pbr==4.3.0                # via mock
+    # via
+    #   -r base.in
+    #   nameko-sqlalchemy
+path.py==11.5.0
+    # via nameko
+pbr==4.3.0
+    # via mock
 psycopg2==2.7.7
-pycparser==2.19           # via cffi
-pyyaml==3.13              # via nameko
+    # via -r base.in
+pycparser==2.19
+    # via cffi
+pyyaml==3.13
+    # via nameko
 redis==3.2.0
-requests==2.19.1          # via nameko
-six==1.11.0               # via bcrypt, eventlet, mock, nameko
+    # via -r base.in
+requests==2.19.1
+    # via nameko
+six==1.11.0
+    # via
+    #   bcrypt
+    #   eventlet
+    #   mock
+    #   nameko
 sqlalchemy==1.2.18
-urllib3==1.23             # via requests
-vine==1.1.4               # via amqp
-werkzeug==0.14.1          # via flask, nameko
-wrapt==1.10.11            # via nameko
+    # via
+    #   -r base.in
+    #   nameko-sqlalchemy
+urllib3==1.23
+    # via requests
+vine==1.1.4
+    # via amqp
+werkzeug==0.14.1
+    # via
+    #   flask
+    #   nameko
+wrapt==1.10.11
+    # via nameko
